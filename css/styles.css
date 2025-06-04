@@ -168,9 +168,12 @@ footer {
 /* Existing responsive styles */
 @media (max-width: 700px) {
     .header-content {
-        flex-direction: column;
+        flex-direction: row;      /* Keep row layout on mobile */
         gap: 12px;
-        text-align: center;
+        text-align: left;         /* Align text to left for consistency */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;          /* Allow wrapping if needed */
     }
 
     .profile-img {
@@ -198,19 +201,22 @@ footer {
 
     .horizontal-nav {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* Align nav links to start for better row header look */
         border-bottom: none;
+        width: auto;
     }
 
     .horizontal-nav li {
         margin: 6px 0;
+        width: 100%;
     }
 
     .horizontal-nav a {
         border-radius: 5px;
         width: 100%;
         display: block;
-        text-align: center;
+        text-align: left;
+        padding-left: 18px;
     }
 }
 
@@ -236,7 +242,7 @@ footer {
 
     header h1 {
         font-size: 1.2rem;
-        text-align: center;
+        text-align: left;
     }
 
     main section {
