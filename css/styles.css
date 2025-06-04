@@ -167,3 +167,64 @@ footer {
     background: #f0f7f4;
 }
 
+
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 0 8px 24px 8px;
+    }
+
+    .card {
+        padding: 16px 10px;
+        margin-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .horizontal-nav {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+    }
+
+    .horizontal-nav li {
+        margin: 6px 0;
+    }
+
+    .horizontal-nav a {
+        border-radius: 5px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+    h1 {
+        font-size: 1.1em;
+    }
+    .card {
+        padding: 8px 2px;
+    }
+}
