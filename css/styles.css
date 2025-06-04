@@ -87,6 +87,12 @@ main {
     padding: 0 20px 40px 20px;
 }
 
+/* Ensure long words and URLs wrap nicely for readability */
+main p, main a {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
 .card {
     background: #fff;
     border-radius: 12px;
@@ -262,10 +268,5 @@ footer {
         font-size: 0.9rem;
         text-align: center;
         padding: 10px 0;
-    }
-
-    /* Ensure contact info wraps nicely */
-    main p, main a {
-        word-break: break-all;
     }
 }
