@@ -26,6 +26,7 @@ header {
     justify-content: center;
     gap: 30px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .profile-img {
@@ -47,15 +48,18 @@ header {
 .horizontal-nav {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     padding: 0;
     list-style: none;
     background: #35424a;
     margin: 0;
     border-bottom: 2px solid #45a049;
+    gap: 40px;
 }
 
 .horizontal-nav li {
-    margin: 0 18px;
+    margin: 0;
 }
 
 .horizontal-nav a {
@@ -66,6 +70,7 @@ header {
     font-weight: 500;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     display: inline-block;
+    font-size: 1.1em;
 }
 
 .horizontal-nav a:hover,
@@ -165,15 +170,14 @@ footer {
     background: #f0f7f4;
 }
 
-/* Existing responsive styles */
+/* Responsive styles for mobile */
 @media (max-width: 700px) {
     .header-content {
-        flex-direction: row;      /* Keep row layout on mobile */
-        gap: 12px;
-        text-align: left;         /* Align text to left for consistency */
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;          /* Allow wrapping if needed */
     }
 
     .profile-img {
@@ -199,24 +203,29 @@ footer {
         font-size: 1.1em;
     }
 
+    /* Keep nav horizontal and centered on mobile */
     .horizontal-nav {
-        flex-direction: column;
-        align-items: flex-start; /* Align nav links to start for better row header look */
-        border-bottom: none;
-        width: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-bottom: 2px solid #45a049;
+        width: 100%;
     }
 
     .horizontal-nav li {
-        margin: 6px 0;
-        width: 100%;
+        margin: 0;
+        width: auto;
     }
 
     .horizontal-nav a {
-        border-radius: 5px;
-        width: 100%;
-        display: block;
-        text-align: left;
-        padding-left: 18px;
+        border-radius: 5px 5px 0 0;
+        width: auto;
+        display: inline-block;
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 1em;
     }
 }
 
@@ -242,7 +251,7 @@ footer {
 
     header h1 {
         font-size: 1.2rem;
-        text-align: left;
+        text-align: center;
     }
 
     main section {
