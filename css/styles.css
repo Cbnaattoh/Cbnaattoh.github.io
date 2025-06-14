@@ -270,3 +270,41 @@ footer {
         padding: 10px 0;
     }
 }
+
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    background: #f0f7f4;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 1.05em;
+    transition: background 0.2s;
+}
+
+.contact-list li:hover {
+    background: #e0f2e9;
+}
+
+.contact-list a {
+    color: #45a049;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s, text-decoration 0.2s;
+    word-break: break-all;
+}
+
+.contact-list a:hover,
+.contact-list a:focus {
+    color: #2d7036;
+    text-decoration: underline;
+}
+
